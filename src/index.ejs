@@ -6,6 +6,25 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>Root Config</title>
 
+  <!-- Global CSS Reset -->
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow-x: hidden;
+    }
+    main {
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+
   <!-- Security policy -->
   <meta
     http-equiv="Content-Security-Policy"
@@ -43,7 +62,9 @@
       "imports": {
         "@syscolabs/root-config": "//localhost:9000/syscolabs-root-config.js",
         "@syscolabs/home-mfe": "//localhost:9001/syscolabs-home-mfe.js",
-        "@syscolabs/user-mfe": "//localhost:9002/syscolabs-user-mfe.js"
+        "@syscolabs/user-mfe": "//localhost:9002/syscolabs-user-mfe.js",
+        "@syscolabs/products-mfe": "//localhost:9003/syscolabs-products-mfe.js",
+        "@syscolabs/cart-mfe": "//localhost:9004/syscolabs-cart-mfe.js"
       }
     }
   </script>

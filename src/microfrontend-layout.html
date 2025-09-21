@@ -1,28 +1,23 @@
 <single-spa-router>
-  <!--
-
-    This is the single-spa Layout Definition for your microfrontends.
-    See https://single-spa.js.org/docs/layout-definition/ for more information.
-
-  -->
-
-  <!-- Example layouts you might find helpful:
-
-  <nav>
-    <application name="@org/navbar"></application>
-  </nav>
-  <route path="settings">
-    <application name="@org/settings"></application>
-  </route>
-
-  -->
-
   <main>
-    <route path="/">
-      <application name="@syscolabs/home-mfe"></application>
+    <!-- Layout shell always visible -->
+    <application name="@syscolabs/home-mfe"></application>
+    
+    <!-- Route-specific MFEs will be mounted inside the layout -->
+    <route default>   
+      <application name="@syscolabs/products-mfe"></application>
     </route>
-    <route path="/user">
+
+    <route path="user">
       <application name="@syscolabs/user-mfe"></application>
+    </route>
+
+    <route path="products">
+      <application name="@syscolabs/products-mfe"></application>
+    </route>
+
+    <route path="cart">
+      <application name="@syscolabs/cart-mfe"></application>
     </route>
   </main>
 </single-spa-router>
